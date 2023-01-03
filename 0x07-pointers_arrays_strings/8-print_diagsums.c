@@ -8,9 +8,10 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, size1;
+	int (i, size1);
 
-	unsigned int sumDiag1, sumDiag2;
+	unsigned int (sumDiag1, sumDiag2);
+
 	size1 = 0;
 	sumDiag1 = 0;
 	sumDiag2 = 0;
@@ -20,6 +21,7 @@ void print_diagsums(int *a, int size)
 	{
 		sumDiag1 = sumDiag1 + a[i];
 	}
+
 	for (i = (size - 1); i < size1; i =  i + (size - 1))
 	{
 		sumDiag2 = sumDiag2 + a[1];
