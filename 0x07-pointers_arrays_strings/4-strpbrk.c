@@ -17,8 +17,9 @@ char *_strpbrk(char *s, char *accept)
 			break;
 		}
 	}
-	if(*(accept + j) != '\0')
+	if (*(accept + j) != '\0')
 	{
 		return (s + i);
 	}
 	return (0);
+}
