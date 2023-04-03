@@ -1,24 +1,28 @@
 #include "main.h"
 /**
- * _strspn - prints the consecutive characters of s1 that are i s2.
- * @s:source string
- * @accept: searching string
- *
- * Return: new string.
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j;
+	unsigned int n = 0;
+	int r;
 
-	for (j = 0; *(s + j); i++)
+	while (*s)
 	{
-		for (i = 0; *(accept + i); i++)
-				{
-				if (*(s + j) == *(accept + i))
+		for (r = 0; accept[r]; r++)
+		{
+			if (*s == accept[r])
+			{
+				n++;
 				break;
-				}
-				if (*(accept + i) == '\0')
-				break;
-				}
-				return (j);
-				}
+			}
+			else if (accept[r + 1] == '\0')
+				return (n);
+		}
+		s++;
+	}
+	return (n);
+}			}
